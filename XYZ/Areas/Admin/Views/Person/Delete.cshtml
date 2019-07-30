@@ -1,0 +1,22 @@
+﻿
+@model Person
+
+<h1>Delete </h1>
+
+
+<!-- NOT WORKING -->
+
+<form asp-action="DeleteConfirmed">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" readonly />
+    <input type="submit" asp-route-id="@Model.Id" />
+</form>
+
+
+
+<!-- WORKING -->
+@*<form asp-action="AnyTrivialString">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" readonly />
+    <input type="submit" asp-route-id="@Model.Id" asp-action="DeleteConfirmed" />
+</form>*@

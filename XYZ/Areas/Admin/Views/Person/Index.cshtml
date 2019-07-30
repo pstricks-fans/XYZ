@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Person>
+
+<h1>Index</h1>
+
+
+@if (Model.Count() > 0)
+{
+    <table border="1">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Name)</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => item.Name)</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id"> Delete </a>
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>No person exists.</p>
+}
+
+
