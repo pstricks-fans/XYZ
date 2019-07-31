@@ -1,0 +1,16 @@
+﻿<h1>Index</h1>
+
+Message: 
+@if (TempData["Message"] == null)
+{
+    <text>Default Text</text>
+}
+else
+{
+    <text>@TempData["Message"]</text>
+}
+<br />
+<br />
+<a asp-action="Delete">Go to "Delete" page</a>
+
+

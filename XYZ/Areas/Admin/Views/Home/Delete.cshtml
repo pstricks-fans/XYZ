@@ -1,0 +1,15 @@
+﻿<h1>Delete </h1>
+Message: @ViewBag.Message
+
+
+
+<!-- Working -->
+@*<form asp-action="AnyTrivialString">
+    <input type="submit" asp-route-id="1" asp-action="DeleteConfirmed" />
+</form>*@
+
+
+<!-- Not Working -->
+<form asp-action="DeleteConfirmed">
+    <input type="submit" asp-route-id="1" />
+</form>
